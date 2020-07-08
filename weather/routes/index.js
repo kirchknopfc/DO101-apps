@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 require('dotenv').config();
 const OWM_API_KEY = process.env.OWM_API_KEY || 'invalid_key';
 const UNITS = process.env.UNITS || 'metric';
-const ENV = process.env;
+const ENV = JSON.stringify(process.env);
 const AUTHOR = process.env.AUTHOR;
 
 /* GET home page. */
