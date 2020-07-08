@@ -11,11 +11,14 @@ block content
           form(method="post", action="get_weather")
             .form-group
               label.sr-only(for="city") City Name
-              input.form-control( name="city" type="text" placeholder="Enter City Name (for ex: New York)" required='required')
+              input.form-control( name="city" type="text" placeholder="Enter City Name (for ex: Vienna)" required='required')
             button.btn.btn-success(type="submit") Get Weather
       if error
         br
         .alert.alert-danger #{error}
+      if env
+        br
+        .alert.alert-danger #{env}
       if weather
         .row
           .col-md-5
