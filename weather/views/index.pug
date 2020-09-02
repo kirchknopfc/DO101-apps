@@ -17,8 +17,13 @@ block content
         br
         .alert.alert-danger #{error}
       if env
-        br
-        .alert.alert-danger #{env}
+        .row
+          .col-md-5
+            p
+            br
+            .panel.panel-primary
+              .panel-heading Env:
+              .panel-body #{env}
       if weather
         .row
           .col-md-5
