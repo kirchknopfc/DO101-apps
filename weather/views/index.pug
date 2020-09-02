@@ -19,11 +19,7 @@ block content
       if env
         .row
           .col-md-5
-            p
-            br
-            .panel.panel-primary
-              .panel-heading Env:
-              .panel-body #{env}
+            p #{env.HOSTNAME}
       if weather
         .row
           .col-md-5
