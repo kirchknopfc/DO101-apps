@@ -19,7 +19,8 @@ block content
       if env
         .row
           .col-md-5
-            p #{env.HOSTNAME}
+            p Hostname= #{env.HOSTNAME}
+            p IP= #{env.KUBERNETES_SERVICE_HOST}
       if weather
         .row
           .col-md-5
