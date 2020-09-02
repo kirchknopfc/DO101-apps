@@ -16,11 +16,6 @@ block content
       if error
         br
         .alert.alert-danger #{error}
-      if env
-        .row
-          .col-md-5
-            p Hostname= #{env.HOSTNAME}
-            p IP= #{env.KUBERNETES_SERVICE_HOST}
       if weather
         .row
           .col-md-5
@@ -33,3 +28,8 @@ block content
                p Humidity = #{weather.main.humidity} &#37;
                p Min = #{weather.main.temp_min} !{units}
                p Max = #{weather.main.temp_max} !{units}
+      if env
+        .row
+          .col-md-5
+            p Hostname= #{env.HOSTNAME}
+            p IP= #{env.KUBERNETES_SERVICE_HOST}
